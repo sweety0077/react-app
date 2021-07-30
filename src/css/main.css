@@ -1,0 +1,162 @@
+main {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  display: flex;
+  grid-gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  height: 85vh;
+}
+
+.main-heading {
+  font-size: 60px;
+  line-height: 1.3;
+  font-weight: 700;
+  text-align: left;
+}
+.main-para {
+  font-size: 14px;
+  text-align: left;
+  padding-top: 28px;
+}
+.buttons {
+  padding-top: 30px;
+  text-align: left;
+}
+.buttons a {
+  border: 1px solid transparent;
+  transition: 0.5s;
+  padding: 14px 17px;
+  border-radius: 26px;
+  display: inline-block;
+  font-size: 14px;
+}
+.buttons a:hover {
+  background: #1f3bce;
+  color: #fff;
+}
+.buttons a + a {
+  margin-left: 20px;
+}
+.fa-play {
+  padding: 6px 7px;
+  background: #1f3bce;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 9px;
+  margin-right: 10px;
+}
+
+.start-button {
+  background: #1f3bce;
+  color: #fff;
+}
+.buttons .start-button:hover {
+  background: #fff;
+  color: #1f3bce;
+}
+.watch-button {
+  color: #1f3bce;
+}
+.buttons .watch-button:hover .fa-play {
+  background: #fff;
+  color: #1f3bce;
+}
+
+aside {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.animated-image {
+  animation: animatedImage 2s ease-in-out infinite alternate-reverse both;
+}
+
+@keyframes animatedImage {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/* responsive */
+@media (min-width: 1800px) {
+  .main-para {
+    font-size: 20px;
+    margin-top: 40px;
+  }
+  .main-heading {
+    font-size: 65px;
+  }
+  .buttons {
+    margin-top: 60px;
+    margin-bottom: 70px;
+  }
+  .buttons a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .main-heading {
+    font-size: 50px;
+  }
+}
+@media (max-width: 991px) {
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 20px 0;
+    width: 550px;
+    margin: auto;
+  }
+  .main-heading {
+    font-size: 40px;
+    margin: auto;
+    display: inline-block;
+  }
+  .animated-image img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 620px) {
+  main {
+    width: 100%;
+    text-align: left;
+  }
+  .main-heading {
+    font-size: 28px;
+  }
+  .main-para {
+    font-size: 12px;
+  }
+}
+@media (max-width: 425px) {
+  aside {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  aside img {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 302px) {
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .watch-button {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}

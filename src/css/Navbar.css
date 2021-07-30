@@ -1,0 +1,129 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+}
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+}
+.nav-bar a {
+  color: #494949;
+}
+.nav-bar a:hover {
+  border-bottom: 2px solid #1f3bce;
+  color: #1f3bce;
+}
+.nav-bar .logo:hover {
+  border: 0;
+}
+.early-btn {
+  border: 1px solid #1f3bce;
+  color: #1f3bce;
+  padding: 12px 9px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.early-btn:hover {
+  background: #1f3bce;
+  color: #fff;
+}
+.menu {
+  display: none;
+}
+.home {
+  display: none;
+}
+#hidden {
+  display: block;
+}
+
+@media (min-width: 1800px) {
+  .early-btn {
+    font-size: 18px;
+  }
+  .nav-bar a {
+    font-size: 18px;
+  }
+}
+@media (max-width: 991px) {
+  .nav-bar {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .nav-bar {
+    display: none;
+  }
+  .menu {
+    display: block;
+    cursor: pointer;
+  }
+  .menu div {
+    width: 30px;
+    height: 3px;
+    background: #1f3bce;
+    margin: 5px;
+    transition: all 0.5s;
+  }
+  #hidden .logo-link {
+    display: none;
+  }
+  #hidden .home {
+    display: block;
+  }
+  #hidden {
+    display: flex;
+    background: #1f3bce;
+    position: absolute;
+    left: 0;
+    top: 12vh;
+    height: 50%;
+    width: 100%;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    animation: left-right 1s ease-in-out;
+    transition: all 0.5s;
+    border-radius: 10px;
+  }
+  #hidden a {
+    font-size: 16px;
+    color: #fff;
+  }
+  #hidden a:hover {
+    border-bottom: 2px solid #fff;
+  }
+  @keyframes left-right {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  #close .line1 {
+    width: 30px;
+    -webkit-transform: rotate(-45deg) translate(0px, 6px);
+    -ms-transform: rotate(-45deg) translate(0px, 6px);
+    transform: rotate(-45deg) translate(0px, 6px);
+  }
+  #close .line2 {
+    display: none;
+  }
+  #close .line3 {
+    width: 30px;
+    -webkit-transform: rotate(45deg) translate(0px, -6px);
+    -ms-transform: rotate(45deg) translate(0px, -6px);
+    transform: rotate(45deg) translate(0px, -6px);
+  }
+  #close div {
+    transition: all 0.8s;
+  }
+  .early-btn {
+    font-size: 12px;
+  }
+}
